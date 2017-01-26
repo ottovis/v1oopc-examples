@@ -228,7 +228,7 @@
       <Project Name="11-01-c-zero" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
-  <Project Name="11-02-c-sorted" Path="11-02-c-sorted/_codelite.project" Active="Yes"/>
+  <Project Name="11-02-c-sorted" Path="11-02-c-sorted/_codelite.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="11-02-c-sorted" ConfigName="Release"/>
@@ -316,6 +316,126 @@
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="12-10-bounce" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="15-01-registers-blink" Path="15-01-registers-blink/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="15-01-registers-blink" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="15-02-registers-copy" Path="15-02-registers-copy/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="15-02-registers-copy" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="15-03-namespace" Path="15-03-namespace/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="15-03-namespace" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="15-04-gpio-blink" Path="15-04-gpio-blink/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="15-04-gpio-blink" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="15-05-gpio-copy" Path="15-05-gpio-copy/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="15-05-gpio-copy" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="15-06-blink-function" Path="15-06-blink-function/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="15-06-blink-function" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="15-07-blink-hwlib" Path="15-07-blink-hwlib/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="15-07-blink-hwlib" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="15-08-kitt-diy" Path="15-08-kitt-diy/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="15-08-kitt-diy" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="15-09-kitt-port" Path="15-09-kitt-port/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="15-09-kitt-port" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="15-10-kitt-hwlib" Path="15-10-kitt-hwlib/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="15-10-kitt-hwlib" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="16-01-kitt" Path="16-01-kitt/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="16-01-kitt" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="16-02-blink" Path="16-02-blink/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="16-02-blink" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="16-03-mixed" Path="16-03-mixed/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="16-03-mixed" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="17-01-invert" Path="17-01-invert/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="17-01-invert" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="17-02-all" Path="17-02-all/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="17-02-all" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="17-03-alternate" Path="17-03-alternate/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="17-03-alternate" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="17-04-window" Path="17-04-window/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="17-04-window" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="17-05-mirror" Path="17-05-mirror/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="17-05-mirror" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="18-01-oled" Path="18-01-oled/_codelite.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="18-01-oled" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="18-02-mirror" Path="18-02-mirror/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="18-02-mirror" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
