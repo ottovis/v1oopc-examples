@@ -10,8 +10,12 @@ int main(int argc, char **argv){
    std::string w = s + " world";
    std::cout << w + '\n';
 
+   // not checked
    s[ 11 ] = 'x';
+
+   // checked => debug assertion failure
    s.at( 11 ) = 'x';
+
    
   std::cout << s << '\n';
    

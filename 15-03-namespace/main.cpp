@@ -14,5 +14,7 @@ namespace my_project {
 
 int main( void ){	
    my_project::my_class x;
+   
+   (void)x;
 }
 

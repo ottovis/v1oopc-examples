@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="example code" Database="">
-  <Project Name="04-01-xyxy" Path="04-01-xyxy/_codelite.project" Active="No"/>
+  <Project Name="04-01-xyxy" Path="04-01-xyxy/_codelite.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="04-01-xyxy" ConfigName="Release"/>
@@ -178,6 +178,12 @@
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="08-02-vector" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="08-03-manipulatoren" Path="08-03-manipulatoren/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="08-03-manipulatoren" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
   <Project Name="09-01-asserts" Path="09-01-asserts/_codelite.project" Active="No"/>
@@ -426,16 +432,34 @@
       <Project Name="17-05-mirror" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
-  <Project Name="18-01-oled" Path="18-01-oled/_codelite.project" Active="Yes"/>
+  <Project Name="18-01-oled" Path="18-01-oled/_codelite.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="18-01-oled" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
-  <Project Name="18-02-mirror" Path="18-02-mirror/_codelite.project" Active="No"/>
+  <Project Name="18-02-circles" Path="18-02-circles/_codelite.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
-      <Project Name="18-02-mirror" ConfigName="Release"/>
+      <Project Name="18-02-circles" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="18-03-mirror" Path="18-03-mirror/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="18-03-mirror" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="18-04-text" Path="18-04-text/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="18-04-text" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="18-05-windows" Path="18-05-windows/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="18-05-windows" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

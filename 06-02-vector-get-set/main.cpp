@@ -9,7 +9,7 @@ public:
       x( x ), y( y )
    {}
    int x_get(){ return x; }
-   int y_get(){ return x; }
+   int y_get(){ return y; }
    void x_set( int new_x ){ x = new_x; }
    void y_set( int new_y ){ y = new_y; }
 };

@@ -1,13 +1,5 @@
 #include "hwlib.hpp"
 
-void fill( hwlib::window & lcd ){
-   for( int x = 0; x < lcd.size.x; ++x ){
-      for( int y = 0; y < lcd.size.y; ++y ){
-         lcd.write( hwlib::location( x, y ), hwlib::black );
-      }
-   }
-}
-
 int main( void ){	
     
    // kill the watchdog
@@ -22,5 +14,8 @@ int main( void ){
    
    auto display = hwlib::glcd_oled( i2c_bus, 0x3c );  
      
-   hwlib::graphics_random_circles( display );
+   display.clear();
+   for( uint16_t i = 10; i < display.size.x - 10; i++ ){
+       display.write( hwlib::location( i, 10 ), hwlib::black );
+   }
 }

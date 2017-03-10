@@ -11,7 +11,6 @@ int main(){
       sum += element;
    }
 
-
    printf( "The answer is %d\n", sum );
    return 0;
 }   
