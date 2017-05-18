@@ -13,6 +13,7 @@ int main( void ){
    auto i2c_bus = hwlib::i2c_bus_bit_banged_scl_sda( scl,sda );
    
    auto display = hwlib::glcd_oled( i2c_bus, 0x3c );  
+   (void)display;
      
    display.clear();
    for( uint16_t i = 10; i < display.size.x - 10; i++ ){

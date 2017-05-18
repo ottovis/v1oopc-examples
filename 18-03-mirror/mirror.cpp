@@ -5,7 +5,11 @@ window_mirror::window_mirror( hwlib::window & w ):
    w( w )
 {}
 
-void window_mirror::write_implementation( hwlib::location pos, hwlib::color col ){
+void window_mirror::write_implementation( 
+   hwlib::location pos, 
+   hwlib::color col,
+   hwlib::buffering buf
+){
    w.write( pos, col );
    w.write( hwlib::location( ( w.size.x - 1 ) - pos.x, pos.y ), col );
 }

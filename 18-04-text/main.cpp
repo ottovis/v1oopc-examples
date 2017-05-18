@@ -1,5 +1,4 @@
 #include "hwlib.hpp"
-#include "mirror.hpp"
 
 int main( void ){	
    

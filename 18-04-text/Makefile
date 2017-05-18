@@ -9,10 +9,10 @@
 #############################################################################
 
 # source files in this project (main.cpp is automatically assumed)
-SOURCES := mirror.cpp
+SOURCES := 
 
 # header files in this project
-HEADERS := mirror.hpp
+HEADERS := 
 
 # other places to look for files for this project
 SEARCH  := 

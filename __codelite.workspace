@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Workspace Name="example code" Database="">
-  <Project Name="04-01-xyxy" Path="04-01-xyxy/_codelite.project" Active="Yes"/>
+<CodeLite_Workspace Name="example code" Database="" Version="10.0.0">
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="04-01-xyxy" ConfigName="Release"/>
@@ -360,7 +359,6 @@
       <Project Name="15-06-blink-function" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
-  <Project Name="15-07-blink-hwlib" Path="15-07-blink-hwlib/_codelite.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="15-07-blink-hwlib" ConfigName="Release"/>
@@ -450,7 +448,7 @@
       <Project Name="18-03-mirror" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
-  <Project Name="18-04-text" Path="18-04-text/_codelite.project" Active="No"/>
+  <Project Name="18-04-text" Path="18-04-text/_codelite.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="18-04-text" ConfigName="Release"/>

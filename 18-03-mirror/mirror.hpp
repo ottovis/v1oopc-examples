@@ -1,5 +1,5 @@
 #ifndef _MIRROR_HPP
-#define MIRROR_HPP
+#define _MIRROR_HPP
 
 #include "hwlib.hpp"
 
@@ -9,10 +9,16 @@ private:
    
 public:
    window_mirror( hwlib::window & w ); 
-   void clear() override { w.clear(); }
+   void clear( hwlib::buffering buf = hwlib::buffering::unbuffered ) override { 
+      w.clear(); 
+   }
    
 private:   
-   void write_implementation( hwlib::location pos, hwlib::color col ) override;
+   void write_implementation( 
+      hwlib::location pos, 
+      hwlib::color col, 
+      hwlib::buffering buf = hwlib::buffering::unbuffered 
+   ) override;
 
 };
 

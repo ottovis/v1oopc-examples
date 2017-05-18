@@ -5,10 +5,6 @@
 #define LINE_HPP
 
 #include "window.hpp"
-// example:
-// declaration of a line class that stores its window
-
-#include "line.hpp"
 
 class line {
 private:
