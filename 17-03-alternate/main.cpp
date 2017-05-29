@@ -8,7 +8,10 @@ public:
    pin_out_invert( hwlib::pin_out & slave ): 
       slave( slave ){}
    
-   void set( bool x ) override {
+   void set( 
+      bool x,
+      hwlib::buffering buf = hwlib::buffering::unbuffered  
+   ) override {
       slave.set( ! x );
    }  
 };
@@ -28,7 +31,10 @@ public:
       list{ &p0, &p1, &p2, &p3 }
    {}
    
-   void set( bool v ){
+   void set( 
+      bool v, 
+      hwlib::buffering buf = hwlib::buffering::unbuffered  
+   ){
       for( auto p  : list ){
           p->set( v );
       }
