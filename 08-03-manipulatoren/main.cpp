@@ -43,7 +43,7 @@ int main(int argc, char **argv){
       << "[" << s << "]\n";
    std::cout << "setw(20)              : " 
       << "[" << std::setw(20) << s << "]\n";
-   std::cout << "setw(20)+right        : " 
+   std::cout << "setw(20)+left         : " 
       << std::left << "[" << std::setw(20) << s << "]\n";
    std::cout << "setw(20)+setfill('-') : " 
       << std::setfill('-') << "[" << std::setw(20) << s << "]\n";

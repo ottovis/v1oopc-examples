@@ -17,6 +17,10 @@ HEADERS := vector.hpp
 # other places to look for files for this project
 SEARCH  := 
 
+# exceptions an RTTI are needed
+CPP_EXCEPTIONS    := 
+CPP_RTTI          :=
+
 # set RELATIVE to the next higher directory 
 # and defer to the Makefile.* there
 RELATIVE := ..
