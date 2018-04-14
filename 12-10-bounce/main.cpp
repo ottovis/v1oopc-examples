@@ -1,3 +1,4 @@
+#include <array>
 #include "window.hpp"
 #include "line.hpp"
 #include "ball.hpp"
@@ -10,7 +11,7 @@ int main(){
    line left( w, vector(   0,  0 ), vector(   0, 63 )  );
    ball b( w, vector( 50, 20 ), 9, vector( 5, 2 ) );
    
-   drawable * objects[] = { &b, &top, &left, &right, &bottom };
+   std::array< drawable *, 5 > objects = { &b, &top, &left, &right, &bottom };
 
    for(;;){
       w.clear();

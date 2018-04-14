@@ -1,8 +1,9 @@
+#include <array>
 #include "hwlib.hpp"
 
 class pin_out_all : public hwlib::pin_out {
 private:
-   hwlib::pin_out * list[ 4 ];     
+   std::array< hwlib::pin_out *, 4 > list;     
    
 public:
 
