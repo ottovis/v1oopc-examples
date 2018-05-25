@@ -12,15 +12,20 @@ public:
       slave.direction_set_input(); 
    }
    
-   bool get() override {
-       return ! slave.get();
+   bool get( 
+      hwlib::buffering buf = hwlib::buffering::unbuffered 
+   ) override {
+       return ! slave.get( buf);
    }       
    void direction_set_output() override { 
       slave.direction_set_output(); 
    }
    
-   void set( bool x ) override {
-      slave.set( ! x );
+   void set( 
+      bool x,
+      hwlib::buffering buf = hwlib::buffering::unbuffered 
+   ) override {
+      slave.set( ! x, buf );
    }  
 };
 

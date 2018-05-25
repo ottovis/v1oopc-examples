@@ -10,7 +10,7 @@ int main(){
    line left( w, vector(   0, 63 ), vector(   0,  0 ) );
    ball b( w, vector( 10, 10 ), 8, vector( 2, 2 ) );
    
-   drawable & objects[] = { &b, &top, &left, &right, &bottom };
+   drawable * objects[] = { &b, &top, &left, &right, &bottom };
 
    for(;;){
       w.clear();
