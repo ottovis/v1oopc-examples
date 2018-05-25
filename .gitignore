@@ -1,5 +1,6 @@
 .clang
 .codelite/
+.codelite/*.*
 _codelite.project
 _codelite.session
 __codelite.workspace
