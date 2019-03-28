@@ -9,7 +9,7 @@
 #############################################################################
 
 # the location of the ti software directory
-ifeq($(OS),Windows_NT)
+ifeq ($(OS),Windows_NT)
    TI-SOFTWARE       := C:/ti-software
 else
    TI-SOFTWARE       := /usr
@@ -20,7 +20,7 @@ SEARCH            += $(TI-SOFTWARE)/Catch2/single_include
 
 # include hwlib
 HWLIB             ?= $(TI-SOFTWARE)/hwlib
-include           $(HWLIB)/Makefile.inc
+include           $(HWLIB)/makefile.inc
 
 # set BMPTK to the bmptk subdirectory
 BMPTK             ?= $(TI-SOFTWARE)/bmptk
