@@ -9,7 +9,11 @@
 #############################################################################
 
 # the location of the ti software directory
-TI-SOFTWARE       := C:/ti-software
+ifeq($(OS),Windows_NT)
+   TI-SOFTWARE       := C:/ti-software
+else
+   TI-SOFTWARE       := /usr
+endif   
 
 # add Catch
 SEARCH            += $(TI-SOFTWARE)/Catch2/single_include
