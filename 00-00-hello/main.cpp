@@ -1,5 +1,5 @@
-#include <iostream>
+#include "hwlib.hpp"
 
 int main(int argc, char **argv){
-   std::cout << "Hello world\n";
+   hwlib::cout << "Hello world\n";
 }
