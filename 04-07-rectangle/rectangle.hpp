@@ -8,9 +8,10 @@
 
 class rectangle {
 private:
+   hwlib::window & w;
    line left, right, top, bottom;
 public:
-   rectangle( int start_x, int start_y, int end_x, int end_y );
+   rectangle( hwlib::window & w, int start_x, int start_y, int end_x, int end_y );
    void print();
 };
 

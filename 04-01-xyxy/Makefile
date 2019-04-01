@@ -12,7 +12,7 @@
 SOURCES := line_print.cpp
 
 # header files in this project
-HEADERS :=
+HEADERS := line_print.hpp
 
 # other places to look for files for this project
 SEARCH  := 

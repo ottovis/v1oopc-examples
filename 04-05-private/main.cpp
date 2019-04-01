@@ -1,31 +1,18 @@
 // example:
-// make the four coordinates private
+// make the window and the four coordinates private
 
-struct line {
-private:
-   
-   int start_x;
-   int start_y; 
-   int end_x;
-   int end_y;
-   
-public:   
-   
-   line( int p_start_x, int p_start_y, int p_end_x, int p_end_y ){
-      start_x = p_start_x;
-      start_y = p_start_y;
-      end_x   = p_end_x;
-      end_y   = p_end_y;
-   }
-
-   void print();
-
-};
-
-void print_line( line x );
+#include "hwlib.hpp"
+#include "line_print.hpp"
 
 int main(int argc, char **argv){
-   line diagonal_line = { 10, 10, 100, 30 };
-   // diagonal_line.start_x = 7 ; // dit geeft nu een compilatie fout
-   print_line( diagonal_line );
+    
+   // the window in which we want to print the line
+   hwlib::target::window w( 128, 64 );    
+    
+   line diagonal_line( w, 10, 10, 40, 40 );
+   // diagonal_line.start_x = 7 ; // dit geeft nu een compilatie fout   
+   diagonal_line.print();
+   
+   // keep the window around until we close it
+   for(;;){ w.poll(); }   
 }

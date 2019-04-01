@@ -6,7 +6,10 @@
 //
 // ==========================================================================
 
+// sam.h uses 'register', which is removed in C++17
+#define register 
 #include "sam.h"
+#undef register
 
 int main( void ){	
    // kill the watchdog

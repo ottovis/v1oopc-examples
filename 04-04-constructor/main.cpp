@@ -2,23 +2,17 @@
 // use a constructor to create (initialize) 
 // a line struct
 
-struct line {
-   int start_x;
-   int start_y; 
-   int end_x;
-   int end_y;
-
-   line( int p_start_x, int p_start_y, int p_end_x, int p_end_y ){
-      start_x = p_start_x;
-      start_y = p_start_y;
-      end_x   = p_end_x;
-      end_y   = p_end_y;
-   }
-
-   void print();
-};
+#include "hwlib.hpp"
+#include "line_print.hpp"
 
 int main(int argc, char **argv){
-   line diagonal_line( 10, 10, 50, 50 );
+    
+   // the window in which we want to print the line
+   hwlib::target::window w( 128, 64 );    
+    
+   line diagonal_line( w, 10, 10, 40, 40 );
    diagonal_line.print();
+   
+   // keep the window around until we close it
+   for(;;){ w.poll(); }   
 }

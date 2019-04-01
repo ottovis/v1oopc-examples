@@ -5,7 +5,12 @@
 #include "rectangle.hpp"
 
 int main(int argc, char **argv){
-   rectangle square( 20, 20, 40, 40 );
+   // the window in which we want to print the line
+   hwlib::target::window w( 128, 64 );    
+    
+   rectangle square( w, 20, 20, 40, 40 );
    square.print();
-   return 0;
+   
+   // keep the window around until we close it
+   for(;;){ w.poll(); }       
 }

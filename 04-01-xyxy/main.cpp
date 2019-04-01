@@ -1,12 +1,13 @@
-// example:
-// print a line by passing the four coordinates
+#include "hwlib.hpp"
+#include "line_print.hpp"
 
-#linclude "hwlib.hpp"
-
-void line_print( int start_x, int start_y, int end_x, int end_y );
-
-int main(int argc, char **argv){
-   hwlib::target::screen( xy( ))
+int main(){
+   // the window in which we want to print the line
+   hwlib::target::window w( 128, 64 );	
    
-   line_print( 10, 10, 20, 20 );
+   // print a line by specifying the start x,y and the end x,y
+   line_print( w, 10, 10, 20, 20 );
+   
+   // keep the window around until we close it
+   for(;;){ w.poll(); } 
 }

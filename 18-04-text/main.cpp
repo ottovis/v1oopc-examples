@@ -18,10 +18,16 @@ int main( void ){
    auto font    = hwlib::font_default_8x8();
    auto display = hwlib::window_ostream( oled, font );
    
-   display 
-      << "\f" << "Hello world" 
-      << "\n" << "second line"
-      << "\t0305" << "pos 3 line 5"
-      << hwlib::flush;   
+   for(;;){
+      display 
+         << "\f" << "Hello world!" 
+         << "\n" << "second line"
+         << "\t0305" << "pos 3 line 5"
+         << hwlib::flush;   
+      hwlib::wait_ms( 1'000 );
+      display 
+         << "\f" << hwlib::flush;   
+      hwlib::wait_ms( 1'000 );
+   }         
 
 }

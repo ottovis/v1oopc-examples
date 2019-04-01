@@ -1,10 +1,17 @@
 // example:
-// use a line class 
-// that is declared and defined in separate header and implementayion files
+// make the window and the four coordinates private
 
+#include "hwlib.hpp"
 #include "line.hpp"
 
 int main(int argc, char **argv){
-   line diagonal_line( 20, 20, 40, 40 );
+    
+   // the window in which we want to print the line
+   hwlib::target::window w( 128, 64 );    
+    
+   line diagonal_line( w, 10, 10, 40, 40 );
    diagonal_line.print();
+   
+   // keep the window around until we close it
+   for(;;){ w.poll(); }   
 }

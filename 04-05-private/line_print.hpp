@@ -1,12 +1,6 @@
-// example:
-// declaration of a line class 
-
-#ifndef LINE_HPP
-#define LINE_HPP
-
 #include "hwlib.hpp"
 
-class line {
+struct line {
 private:    
 
    hwlib::window & w;
@@ -32,5 +26,3 @@ public:
 
    void print();
 };
-
-#endif // LINE_HPP

@@ -9,7 +9,7 @@
 #############################################################################
 
 # source files in this project (main.cpp is automatically assumed)
-SOURCES := rectangle.cpp line.cpp line_print.cpp
+SOURCES := rectangle.cpp line.cpp 
 
 # header files in this project
 HEADERS := rectangle.hpp line.hpp
