@@ -14,13 +14,5 @@ TARGET            := native
 # enable exeptions (disabled by default by bmptk)
 PROJECT_CPP_FLAGS += -fexceptions 
 
-# SFML
-SFML              = $(RELATIVE)/../SFML-2.5.1
-SEARCH            += $(SFML)/include
-#LINKER_FLAGS      += -L$(SFML)/lib 
-LINKER_FLAGS      += -LC:/ti-software/SFML-2.5.1/lib
-LINKER_FLAGS      += -lsfml-graphics-s -lsfml-window-s -lsfml-audio-s -lsfml-network-s -lsfml-system-s
-DEFINES           += -DSFML_STATIC
-
-# defer to the Makefile.shared
+# defer to the Makefile.link
 include           $(RELATIVE)/Makefile.link
