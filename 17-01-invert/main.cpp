@@ -12,21 +12,30 @@ public:
       slave.direction_set_input(); 
    }
    
-   bool get( 
-      hwlib::buffering buf = hwlib::buffering::unbuffered 
-   ) override {
-       return ! slave.get( buf);
-   }       
    void direction_set_output() override { 
       slave.direction_set_output(); 
    }
    
-   void set( 
-      bool x,
-      hwlib::buffering buf = hwlib::buffering::unbuffered 
-   ) override {
-      slave.set( ! x, buf );
-   }  
+   bool read() override {
+       return ! slave.read();
+   }    
+   
+   void write( bool x ) override {
+      slave.write( ! x );
+   } 
+
+   void direction_flush() override { 
+      slave.direction_flush(); 
+   }
+   
+   void refresh() override { 
+      slave.refresh(); 
+   }
+   
+   void flush() override { 
+      slave.flush(); 
+   }
+   
 };
 
 void copy_pins( 
@@ -36,15 +45,14 @@ void copy_pins(
    destination.direction_set_output();
    source.direction_set_input();
    for(;;){
-      destination.set( source.get() );
+      source.refresh();       
+      destination.write( source.read() );
+      destination.flush();
    }
 }
    
 
 int main( void ){	
-    
-   // kill the watchdog
-   WDT->WDT_MR = WDT_MR_WDDIS;
    
    namespace target = hwlib::target;
    auto led    = target::pin_in_out( target::pins::led );

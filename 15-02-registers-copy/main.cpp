@@ -6,7 +6,9 @@
 //
 // ==========================================================================
 
+#define register 
 #include "sam.h"
+#undef register
 
 int main( void ){	
    // kill the watchdog

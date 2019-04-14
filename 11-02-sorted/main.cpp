@@ -8,7 +8,8 @@ int main(){
    unsigned int fouten = 0;
    
    for( unsigned int i = 1; i <= array_size; ++i ){
-      array[ i ] = 100 + i;
+      if( i < array_size ) // prevent the compiler error!
+          array[ i ] = 100 + i;
    }
    
    for( unsigned int i = 0; i < array_size; ++i ){       

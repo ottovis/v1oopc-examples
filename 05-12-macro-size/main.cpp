@@ -10,6 +10,7 @@ void f(){
    #define ARRAY_SIZE 20
    char my_array[ ARRAY_SIZE ];
    // . . .
+   (void)my_array;
 }
 
 

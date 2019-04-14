@@ -9,17 +9,19 @@
 #include "hwlib.hpp"
 
 int main( void ){	
-   // kill the watchdog
-   WDT->WDT_MR = WDT_MR_WDDIS;
    
-   auto led = hwlib::target::pin_in_out( 1, 27 );
+   auto led = hwlib::target::pin_in_out( hwlib::target::pins::d13 );
    led.direction_set_output();
+   led.direction_flush();
 
-   auto sw = hwlib::target::pin_in_out( 2, 23 );
+   auto sw = hwlib::target::pin_in_out( hwlib::target::pins::d7 );
    sw.direction_set_input();
+   sw.direction_flush();
 
    while(1){
-      led.set( ! sw.get() );
+      sw.refresh();
+      led.write( ! sw.read() );
+      led.flush();
    }
 }
 

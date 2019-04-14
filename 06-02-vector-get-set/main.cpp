@@ -1,11 +1,11 @@
 #include <iostream>
 
-class vector {
+class xy {
 private:
    int x;
    int y; 
 public:
-   vector( int x, int y ): 
+   xy( int x, int y ): 
       x( x ), y( y )
    {}
    int x_get(){ return x; }
@@ -16,14 +16,14 @@ public:
 
 class line {
 private:
-   vector start;
-   vector end;
+   xy start;
+   xy end;
 public:
-   line( vector start, vector end ): start( start ), end( end ){}   
+   line( xy start, xy end ): start( start ), end( end ){}   
 };
 
 int main(int argc, char **argv){
-   vector a( 1, 2 ), b( 3, 4 );
+   xy a( 1, 2 ), b( 3, 4 );
 
    // add b to a
    a.x_set( a.x_get() + b.x_get() );

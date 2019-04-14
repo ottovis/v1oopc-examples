@@ -17,6 +17,7 @@ HEADERS :=
 # other places to look for files for this project
 SEARCH  := 
 
-# set BMPTK to the next higher directory and defer to the Makefile.due
-BMPTK := $(BMPTK)../
-include $(BMPTK)Makefile.native
+# set RELATIVE to the next higher directory 
+# and defer to the Makefile.* there
+RELATIVE := ..
+include $(RELATIVE)/Makefile.native

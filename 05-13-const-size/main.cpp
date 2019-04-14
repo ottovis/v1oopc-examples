@@ -9,6 +9,7 @@ void f(){
    const int array_size = 20;
    char my_array[ array_size ];
    // . . .
+   (void) my_array[ 0 ];
 }
 
 

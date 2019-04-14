@@ -13,7 +13,7 @@ int main( void ){
    auto pin = hwlib::target::pin_adc( hwlib::target::ad_pins::a0 );
    
    for(;;){
-      hwlib::cout << pin.get() << "\n";
+      hwlib::cout << pin.read() << "\n";
       hwlib::wait_ms( 200 );
    }
    

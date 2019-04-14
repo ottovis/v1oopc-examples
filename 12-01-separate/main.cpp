@@ -1,23 +1,43 @@
-#include "window.hpp"
-#include "circle.hpp"
+#include "hwlib.hpp"
+
+class circle {
+private:
+   hwlib::window & w;
+   hwlib::xy midpoint;
+   int radius;
+ 
+public:
+
+   circle( hwlib::window & w, const hwlib::xy & midpoint, int radius ):
+      w( w ),
+      midpoint( midpoint ),
+      radius( radius )
+   {}
+   
+   void draw(){
+      hwlib::circle c( midpoint, radius );
+      c.draw( w );
+      w.flush();
+   }
+};
 
 class ball {
 private:
-   window & w;
-   vector midpoint;
+   hwlib::window & w;
+   hwlib::xy midpoint;
    int radius;
-   vector speed;
+   hwlib::xy speed;
 public:
-   ball( window &w, vector midpoint, int radius, vector speed );
+   ball( hwlib::window & w, hwlib::xy midpoint, int radius, hwlib::xy speed );
    void draw();
    void update();
 };
 
 void ball::update(){
-   midpoint += speed;
+   midpoint = midpoint + speed;
 }
 
-ball::ball( window &w, vector midpoint, int radius, vector speed ):
+ball::ball( hwlib::window & w, hwlib::xy midpoint, int radius, hwlib::xy speed ):
    w( w ),
    midpoint( midpoint ),
    radius( radius ),
@@ -31,12 +51,12 @@ void ball::draw(){
 
 
 int main(int argc, char **argv){
-   window w( 128, 64, 2 );
+   hwlib::target::window w( 128, 64, 2 );
    
-   ball b( w, vector( 30, 30 ), 20, vector( 10, 20 ) );
+   ball b( w, hwlib::xy( 30, 30 ), 20, hwlib::xy( 10, 20 ) );
    b.draw();
    b.update();
    b.draw();
    
-   return 0;
+   for(;;){ w.poll(); } 
 }

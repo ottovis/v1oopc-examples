@@ -1,23 +1,23 @@
 #include <iostream>
 
-class vector {
+class xy {
 public:
    int x;
    int y; 
    
-   vector( int x, int y ): 
+   xy( int x, int y ): 
       x( x ), y( y )
    {}   
 
-   vector operator+() const {
-      return vector( x, y );
+   xy operator+() const {
+      return xy( x, y );
    }
 
 };
 
 int main(int argc, char **argv){
    
-   vector a( 1, 2 ), b( 3, 4 );
+   xy a( 1, 2 ), b( 3, 4 );
    
    a = + b;
    

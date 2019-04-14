@@ -1,22 +1,22 @@
 #include <iostream>
 
-class vector {
+class xy {
 public:
    int x;
    int y; 
    
-   vector( int x, int y ): 
+   xy( int x, int y ): 
       x( x ), y( y )
    {}
    
-   vector(){}
+   xy(){}
 
 };
 
 int main(int argc, char **argv){
    
-   vector a;
-   vector b( 1, 2 );
+   xy a;
+   xy b( 1, 2 );
 
    return 0;
 }

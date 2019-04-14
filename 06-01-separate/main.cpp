@@ -1,25 +1,30 @@
-#include <iostream>
-
-void print_line( int start_x, int start_y, int end_x, int end_y );
+#include "hwlib.hpp"
 
 class line {
-private:
+private:    
+
+   hwlib::window & w;
    int start_x;
    int start_y; 
    int end_x;
    int end_y;
+
 public:
 
-   line( int p_start_x, int p_start_y, int p_end_x, int p_end_y ){
+   line( 
+       hwlib::window & w,
+       int p_start_x, int p_start_y, 
+       int p_end_x, int p_end_y 
+   ): 
+      w( w )
+   {
       start_x = p_start_x;
       start_y = p_start_y;
       end_x   = p_end_x;
       end_y   = p_end_y;
    }
    
-   void print(){
-      print_line( start_x, start_y, end_x, end_y );
-   }
+   void print();
 
    // move the line
    void shift( int x, int y ){
@@ -30,12 +35,23 @@ public:
    }
 };
 
+
+void line::print(){
+   hwlib::line line( 
+   hwlib::xy( start_x, start_y), 
+   hwlib::xy( end_x, end_y ) );
+   line.draw( w );
+   w.flush();
+}
+
 int main(int argc, char **argv){
-   line diagonal_line( 10, 10, 40, 20 );
+   hwlib::target::window w( 128, 64 );	    
+    
+   line diagonal_line( w, 10, 10, 40, 20 );
    diagonal_line.print();
    
    diagonal_line.shift( 50, 5 );
    diagonal_line.print();
    
-   return 0;
+   for(;;){ w.poll(); }
 }

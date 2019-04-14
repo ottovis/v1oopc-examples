@@ -1,20 +1,20 @@
-#include "vector.hpp"
+#include "xy.hpp"
 #include <assert.h> 
 
-bool operator==( const vector & lhs, const vector & rhs ){
+bool operator==( const xy & lhs, const xy & rhs ){
    return ( lhs.x == rhs.x ) && ( lhs.y == rhs.y );
 }
 
 int main(int argc, char **argv){
 
-   vector a( 1, 2 );
-   vector b( 4, 3 );
+   xy a( 1, 2 );
+   xy b( 4, 3 );
 
-   vector c = a + b;
+   xy c = a + b;
 
-   assert( a == vector( 1, 2 ) );
-   assert( b == vector( 4, 3 ) );
-   assert( c == vector( 5, 5 ) );
+   assert( a == xy( 1, 2 ) );
+   assert( b == xy( 4, 3 ) );
+   assert( c == xy( 5, 5 ) );
 
    return 0;
 }

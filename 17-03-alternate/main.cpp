@@ -8,18 +8,20 @@ private:
 public:
    pin_out_invert( hwlib::pin_out & slave ): 
       slave( slave ){}
+      
+   void write( bool x ) override {
+      slave.write( ! x );
+   } 
    
-   void set( 
-      bool x,
-      hwlib::buffering buf = hwlib::buffering::unbuffered  
-   ) override {
-      slave.set( ! x );
-   }  
+   void flush() override { 
+      slave.flush(); 
+   }
+   
 };
 
 class pin_out_all : public hwlib::pin_out {
 private:
-   std::array< hwlib::pin_out *, 4 > list;       
+   std::array< hwlib::pin_out *, 4 > list;     
    
 public:
 
@@ -32,20 +34,21 @@ public:
       list{ &p0, &p1, &p2, &p3 }
    {}
    
-   void set( 
-      bool v, 
-      hwlib::buffering buf = hwlib::buffering::unbuffered  
-   ){
+   void write( bool v ) override {
       for( auto p  : list ){
-          p->set( v );
+          p->write( v );
+      }
+   }
+   
+   void flush() override {
+      for( auto p  : list ){
+          p->flush();
       }
    }
 };
 
+
 int main( void ){	
-    
-   // kill the watchdog
-   WDT->WDT_MR = WDT_MR_WDDIS;
    
    namespace target = hwlib::target;
    

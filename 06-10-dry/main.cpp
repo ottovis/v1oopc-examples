@@ -1,21 +1,21 @@
 #include <iostream>
 
-class vector {
+class xy {
 public:
    int x;
    int y; 
-   vector operator+( const vector & rhs ) const;
-   vector & operator+=( const vector & rhs );
+   xy operator+( const xy & rhs ) const;
+   xy & operator+=( const xy & rhs );
 };
 
-vector & vector::operator+=( const vector & rhs ){
+xy & xy::operator+=( const xy & rhs ){
    x += rhs.x;
    y += rhs.y;
    return *this;
 }
 
-vector vector::operator+( const vector & rhs ) const {
-   vector temp = *this;
+xy xy::operator+( const xy & rhs ) const {
+   xy temp = *this;
    temp += rhs;
    return temp;
 }

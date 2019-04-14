@@ -16,20 +16,20 @@ public:
       list{ &p0, &p1, &p2, &p3 }
    {}
    
-   void set( 
-      bool v, 
-      hwlib::buffering buf = hwlib::buffering::unbuffered  
-   ){
+   void write( bool v ) override {
       for( auto p  : list ){
-          p->set( v );
+          p->write( v );
+      }
+   }
+   
+   void flush() override {
+      for( auto p  : list ){
+          p->flush();
       }
    }
 };
 
 int main( void ){	
-    
-   // kill the watchdog
-   WDT->WDT_MR = WDT_MR_WDDIS;
    
    namespace target = hwlib::target;
    

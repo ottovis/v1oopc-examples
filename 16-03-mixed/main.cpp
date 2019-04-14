@@ -1,10 +1,6 @@
 #include "hwlib.hpp"
 
-int main( void ){	
-    
-   // kill the watchdog
-   WDT->WDT_MR = WDT_MR_WDDIS;
-   
+int main( void ){	   
    namespace target = hwlib::target;
    
    auto ds   = target::pin_out( target::pins::d8 );
@@ -21,7 +17,7 @@ int main( void ){
    auto led1 = target::pin_out( target::pins::d3 );
    auto led2 = target::pin_out( target::pins::d4 );
    
-   auto leds = hwlib::port_out_from_pins( 
+   auto leds = hwlib::port_out_from( 
       led0, 
       led1, 
       led2, 

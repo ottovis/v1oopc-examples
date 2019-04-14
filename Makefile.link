@@ -12,7 +12,7 @@
 ifeq ($(OS),Windows_NT)
    TI-SOFTWARE       := C:/ti-software
 else
-   TI-SOFTWARE       := /usr
+   TI-SOFTWARE       := $(HOME)
 endif   
 
 # add Catch

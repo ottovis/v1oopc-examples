@@ -1,10 +1,6 @@
 #include "hwlib.hpp"
 
-int main( void ){	
-    
-   // kill the watchdog
-   WDT->WDT_MR = WDT_MR_WDDIS;
-   
+int main( void ){	  
    namespace target = hwlib::target;
    
    auto scl = target::pin_oc( target::pins::scl );

@@ -9,16 +9,18 @@
 #include "hwlib.hpp"
 
 int main( void ){	
-   // kill the watchdog
-   WDT->WDT_MR = WDT_MR_WDDIS;
+   // hwlib will kill the watchdog
    
    // the on-board LED is connected to port B bit 27   
    auto led = hwlib::target::pin_in_out( 1, 27 );
    led.direction_set_output();
+   led.direction_flush();
    while(1){
-      led.set( 1 );
+      led.write( 1 );
+      led.flush();
       hwlib::wait_ms( 200 );
-      led.set( 0 );
+      led.write( 0 );
+      led.flush();
       hwlib::wait_ms( 200 );   
    }
 }

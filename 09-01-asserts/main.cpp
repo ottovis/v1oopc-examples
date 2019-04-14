@@ -1,11 +1,11 @@
-#include "vector.hpp"
+#include "xy.hpp"
 #include <assert.h>  
 
 int main(int argc, char **argv){
-   vector a( 1, 2 );
-   vector b( 4, 3 );
+   xy a( 1, 2 );
+   xy b( 4, 3 );
 
-   vector c = a + b;
+   xy c = a + b;
 
    assert( a.x == 1 ); assert( a.y == 2 );
    assert( b.x == 4 ); assert( b.y == 3 );

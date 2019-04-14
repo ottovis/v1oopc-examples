@@ -1,22 +1,22 @@
 #include <iostream>
 
-class vector {
+class xy {
 public:
    int x;
    int y; 
    
-   vector( int x, int y ): 
+   xy( int x, int y ): 
       x( x ), y( y )
    {}   
 
-   vector operator+( const vector & rhs ) const {
-      return vector( x + rhs.x, y + rhs.y );
+   xy operator+( const xy & rhs ) const {
+      return xy( x + rhs.x, y + rhs.y );
    }
 };
 
 int main(int argc, char **argv){
    
-   vector a( 1, 2 ), b( 3, 4 );
+   xy a( 1, 2 ), b( 3, 4 );
    
 
    // calculations with vectors

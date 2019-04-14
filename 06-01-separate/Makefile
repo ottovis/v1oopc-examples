@@ -9,10 +9,10 @@
 #############################################################################
 
 # source files in this project (main.cpp is automatically assumed)
-SOURCES := print_line.cpp 
+SOURCES := 
 
 # header files in this project
-HEADERS := print_line.hpp 
+HEADERS := 
 
 # other places to look for files for this project
 SEARCH  := 

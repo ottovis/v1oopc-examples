@@ -1,13 +1,10 @@
 #include "ostream"
-#include "vector.hpp"
+#include "xy.hpp"
 
-// needed to get Catch working with MinGW
-#define TWOBLUECUBES_CATCH_REPORTER_JUNIT_HPP_INCLUDED
-namespace Catch{ class JunitReporter{ ~JunitReporter(); }; };
+#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
+#include "catch.hpp"
 
-#include "catch_with_main.hpp"
-
-std::ostream & operator<<( std::ostream & lhs, vector pos ){
+std::ostream & operator<<( std::ostream & lhs, xy pos ){
    lhs << "(" << pos.x << "," << pos.y << ")";
    return lhs;
 }
@@ -15,7 +12,7 @@ std::ostream & operator<<( std::ostream & lhs, vector pos ){
 TEST_CASE( "operator<<" ){
    std::stringstream s;
    
-   vector v( 1, 2 );
+   xy v( 1, 2 );
    
    s << v;
    

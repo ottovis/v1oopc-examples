@@ -1,9 +1,7 @@
 #include "hwlib.hpp"
 
 int main( void ){	
-   // kill the watchdog
-   WDT->WDT_MR = WDT_MR_WDDIS;
-   
+  
    namespace target = hwlib::target;
    auto ds   = target::pin_out( target::pins::d8 );
    auto shcp = target::pin_out( target::pins::d9 );

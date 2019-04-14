@@ -1,10 +1,11 @@
-#include <iostream>
+#ifndef XY_HPP
+#define XY_HPP
 
 class xy {
 public:
    int x;
    int y; 
-
+   
    xy( int x, int y ): 
       x( x ), y( y )
    {}
@@ -13,11 +14,10 @@ public:
       x( 0 ), y( 0 )
    {}
 
+   xy operator+( const xy & rhs ) const {
+      return xy( x + rhs.x, y + rhs.y );
+   }   
+   
 };
 
-int main(int argc, char **argv){
-   xy a( 1, 2 );
-   xy b;
-   
-   return 0;
-}
+#endif
