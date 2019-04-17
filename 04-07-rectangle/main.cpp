@@ -1,10 +1,11 @@
 // example:
 // a rectangle object that is contains four line objects
 
-#include <iostream>
+#include "hwlib.hpp"
 #include "rectangle.hpp"
 
 int main(int argc, char **argv){
+    
    // the window in which we want to print the line
    hwlib::target::window w( 128, 64 );    
     
