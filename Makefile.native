@@ -14,5 +14,8 @@ TARGET            := native
 # enable exeptions (disabled by default by bmptk)
 PROJECT_CPP_FLAGS += -fexceptions 
 
+# add Catch
+SEARCH            += $(RELATIVE)/../Catch2/single_include
+
 # defer to the Makefile.link
 include           $(RELATIVE)/Makefile.link
