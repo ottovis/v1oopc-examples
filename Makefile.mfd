@@ -1,6 +1,6 @@
 #############################################################################
 #
-# makefile.due common settings for Arduino Uno projects
+# makefile.due common settings for My-First-Dev-Board projects
 #
 # (c) Wouter van Ooijen (www.voti.nl) 2017
 #
@@ -9,7 +9,7 @@
 #############################################################################
 
 # settings for Arduino Due projects
-TARGET            := arduino_uno
+TARGET            := my_first_dev_board
 SERIAL_PORT       ?= COM4
 CONSOLE_BAUDRATE  := 2400
 

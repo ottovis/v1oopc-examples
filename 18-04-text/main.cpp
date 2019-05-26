@@ -16,7 +16,7 @@ int main( void ){
    auto oled    = hwlib::glcd_oled( i2c_bus, 0x3c ); 
    
    auto font    = hwlib::font_default_8x8();
-   auto display = hwlib::window_ostream( oled, font );
+   auto display = hwlib::terminal_from( oled, font );
    
    for(;;){
       display 

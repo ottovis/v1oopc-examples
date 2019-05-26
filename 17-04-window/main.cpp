@@ -1,6 +1,9 @@
 #include "window.hpp"
 #include "circle.hpp"
 
+// This is an old example that has to be rewritten for
+// the new hlwib which uses SFML
+
 class ball : public circle {
 private:
    vector speed;

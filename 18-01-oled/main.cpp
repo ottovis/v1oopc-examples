@@ -12,6 +12,7 @@ int main( void ){
      
    display.clear();
    for( uint16_t i = 10; i < display.size.x - 10; i++ ){
-       display.write( hwlib::location( i, 10 ), hwlib::black );
+       display.write( hwlib::xy( i, 10 ) );
    }
+   display.flush();
 }

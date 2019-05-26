@@ -14,18 +14,18 @@ int main( void ){
 
    auto w1 = hwlib::window_part( 
       oled, 
-      hwlib::location( 0, 0 ),
-      hwlib::location( 128, 32));
+      hwlib::xy( 0, 0 ),
+      hwlib::xy( 128, 32));
    auto w2 = hwlib::window_part( 
       oled, 
-      hwlib::location( 0, 32 ),
-      hwlib::location( 128, 32));
+      hwlib::xy( 0, 32 ),
+      hwlib::xy( 128, 32));
       
    auto f1 = hwlib::font_default_16x16();
-   auto d1 = hwlib::window_ostream( w1, f1 );
+   auto d1 = hwlib::terminal_from( w1, f1 );  
    
    auto f2 = hwlib::font_default_8x8();
-   auto d2 = hwlib::window_ostream( w2, f2 );
+   auto d2 = hwlib::terminal_from( w2, f2 );
    
    d1 << "\f"
       << "LASER \nshooter" << hwlib::flush;   

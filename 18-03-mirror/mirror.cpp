@@ -1,20 +1,25 @@
 #include "mirror.hpp"
 
 window_mirror::window_mirror( hwlib::window & w ): 
-   window( hwlib::location( w.size.x / 2, w.size.y ), hwlib::black, hwlib::white ),
+   window( hwlib::xy( w.size.x / 2, w.size.y ), hwlib::white, hwlib::black ),
    w( w )
 {}
 
 void window_mirror::write_implementation( 
-   hwlib::location pos, 
-   hwlib::color col,
-   hwlib::buffering buf
+   hwlib::xy pos, 
+   hwlib::color col
 ){
    w.write( pos, col );
-   w.write( hwlib::location( ( w.size.x - 1 ) - pos.x, pos.y ), col );
+   w.write( hwlib::xy( ( w.size.x - 1 ) - pos.x, pos.y ), col );
 }
 
+void window_mirror::clear(){ 
+   w.clear(); 
+}
 
+void window_mirror::flush(){
+   w.flush();   
+}
 
 
 
